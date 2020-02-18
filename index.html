@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Typing Speed Test</title>
+    <script src="origintext.js" async></script>
+    <script src="script.js" async></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="masthead">
+      <span>HURRY UP AND TYPE!</span>
+    </header>
+    <main class="main">
+      <article class="intro">
+        <p>
+          This is a typing speed test. Copy the passage of classical literature
+          in the field below. The timer starts when you start typing. It will
+          only stop when you match the excerpt EXACTLY. Godspeed!
+        </p>
+      </article>
+
+      <section class="test-area">
+        <div id="origin-text">
+          <p></p>
+        </div>
+
+        <div class="test-wrapper">
+          <textarea
+            id="test-area"
+            name="textarea"
+            rows="8"
+            placeholder="The clock starts when you start typing."
+          ></textarea>
+        </div>
+        <div class="timers">
+          <span id="last-time">Last Time: 00:00:00</span>
+          <span id="wpm">Words Per Min: 0</span>
+        </div>
+        <div class="meta">
+          <section id="clock">
+            <div class="timer">00:00:00</div>
+          </section>
+          <button id="redo">Redo Test</button>
+          <button id="reset">Next Test</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
