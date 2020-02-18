@@ -45,7 +45,7 @@ function spellCheck() {
     theTimer.classList.remove("blinker");
     testWrapper.classList.remove("blinker");
     testWrapper.style.borderColor = "#1CA91C";
-    setDisplayTwo(); 
+    setDisplayTwo();
   } else {
     if (textEntered == originTextMatch) {
       theTimer.classList.remove("blinker");
@@ -86,7 +86,6 @@ function wordCount() {
 // Calculate words per minute:
 function wpm() {
   var finalTime = timer[0] * 60 + timer[1];
-  console.log(wordCount());
   var result = Math.floor((60 / finalTime) * wordCount());
   return result;
 }
@@ -100,7 +99,7 @@ function redo() {
   timerRunning = false;
   testArea.value = "";
   theTimer.innerHTML = "00:00:00";
-  lastWpm.innerHTML = "Words Per Min: 0"
+  lastWpm.innerHTML = "Words Per Min: 0";
   testWrapper.style.borderColor = "grey";
 }
 
@@ -112,7 +111,7 @@ function reset() {
   testArea.value = "";
   theTimer.innerHTML = "00:00:00";
   lastTime.innerHTML = "Last Time: 00:00:00";
-  lastWpm.innerHTML = "Words Per Min: 0"
+  lastWpm.innerHTML = "Words Per Min: 0";
   testWrapper.style.borderColor = "grey";
   nextRandom();
 }
