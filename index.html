@@ -6,6 +6,7 @@
     <title>JS Typing Speed Test</title>
     <script src="origintext.js" async></script>
     <script src="script.js" async></script>
+    <script src="savestate.js" async></script>
     <link
       href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
       rel="stylesheet"
@@ -17,7 +18,7 @@
     <header class="masthead">
       <span>HURRY UP AND TYPE!</span>
     </header>
-    <main class="main">
+    <span class="main">
       <article class="intro">
         <p>
           This is a typing speed test. Copy the passage of classical literature
@@ -42,6 +43,7 @@
         <div class="timers">
           <span id="last-time">Last Time: 00:00:00</span>
           <span id="wpm">Words Per Min: 0</span>
+          <span id="best-wpm">Best WPM: 0</span>
         </div>
         <div class="meta">
           <section id="clock">
@@ -51,6 +53,6 @@
           <button id="reset">Next Test</button>
         </div>
       </section>
-    </main>
+    </span>
   </body>
 </html>

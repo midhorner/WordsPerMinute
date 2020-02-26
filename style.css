@@ -6,19 +6,22 @@ body {
 
 .masthead {
   background-color: rgba(20, 81, 124, 0.8);
-  padding: 1px;
+  padding: 1px 4px;
   text-align: center;
-  width: 570px;
+  width: fit-content;
   margin: auto;
-    /* background-image: linear-gradient(45deg, #335d8d, #28486d, #1e3652); */
 }
 
 .masthead span {
   font-family: "Quicksand", sans-serif;
-  font-size: 3em;
+  font-size: 3.4em;
   font-weight: 100;
   color: #ffffff;
   text-shadow: 0.5px 0.5px 6px rgb(96, 59, 226);
+}
+
+.main {
+  margin: auto;
 }
 
 .intro {
@@ -79,18 +82,23 @@ body {
 
 .timers {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-bottom: 0.5em;
 }
 
 #last-time {
-  font-size: 1.2em;
-  font-weight: 700;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+#best-wpm {
+  font-size: 1.1em;
+  font-weight: 600;
 }
 
 #wpm {
-  font-size: 1.2em;
-  font-weight: 700;
+  font-size: 1.1em;
+  font-weight: 600;
 }
 
 .meta {
@@ -118,22 +126,32 @@ body {
 #reset:hover {
   color: white;
   background-color: #309657;
+  cursor: pointer;
+}
+
+#reset:active {
+  transform: scale(0.96);
 }
 
 #redo {
   padding: 0.5em 1em;
   font-size: 1.2em;
   font-weight: bold;
-  color: #e95d0f;
+  color: #335d8d;
   background: white;
-  border: 10px solid #e95d0f;
+  border: 10px solid #335d8d;
   border-radius: 10px;
   outline: none;
 }
 
 #redo:hover {
   color: white;
-  background-color: #e95d0f;
+  background-color: #335d8d;
+  cursor: pointer;
+}
+
+#redo:active {
+  transform: scale(0.96);
 }
 
 @keyframes blink {

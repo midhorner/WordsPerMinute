@@ -5,6 +5,7 @@ const resetButton = document.querySelector("#reset");
 const theTimer = document.querySelector(".timer");
 const lastTime = document.querySelector("#last-time");
 const lastWpm = document.querySelector("#wpm");
+const bestWpm = document.querySelector("#best-wpm");
 
 var timer = [0, 0, 0, 0];
 var interval;
@@ -74,6 +75,7 @@ function setDisplayOne() {
 
 function setDisplayTwo() {
   lastWpm.innerHTML = "Words Per Min: " + wpm();
+  bestWpm.innerHTML = "Best WPM: " + setSave();
 }
 
 //Counts the words in text area:
@@ -90,7 +92,7 @@ function wpm() {
   return result;
 }
 
-// Reset everything:
+// Redo same puzzle:
 function redo() {
   setDisplayOne();
   clearInterval(interval);
@@ -103,6 +105,7 @@ function redo() {
   testWrapper.style.borderColor = "grey";
 }
 
+// Next puzzle
 function reset() {
   clearInterval(interval);
   interval = null;
@@ -116,7 +119,7 @@ function reset() {
   nextRandom();
 }
 
-// Event listeners for keyboard input and the reset button:
+// Event listeners for keyboard input and the reset/redo buttons:
 testArea.addEventListener("keypress", start, false);
 testArea.addEventListener("keyup", spellCheck, false);
 redoButton.addEventListener("click", redo, false);
