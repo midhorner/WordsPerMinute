@@ -2,8 +2,10 @@
 var fastestWpm = 0;
 
 // Object that stores best WPM
-function BestTime(wpm) {
-  this.wpm = wpm;
+class BestTime {
+    constructor(wpm) {
+        this.wpm = wpm;
+    }
 }
 
 // Function that sets best WPM

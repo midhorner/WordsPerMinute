@@ -12,13 +12,15 @@ var textSamples = [
   "Towards thee I roll, thou all-destroying but unconquering whale; to the last I grapple with thee; from hell's heart I stab at thee; for hate's sake I spit my last breath at thee."
 ];
 
-function randomText() {
+
+// IIFE starts with random text sample
+(function randomText() {
   var randomNumber = Math.floor(Math.random() * textSamples.length);
   var openingText = textSamples[randomNumber];
   document.querySelector("#origin-text p").innerHTML = openingText;
-}
-randomText();
+})();
 
+// Allows next button to move through array
 function nextRandom() {
   var nextText = previousRandom + 1;
   if (nextText === textSamples.length) {

@@ -11,7 +11,7 @@ var timer = [0, 0, 0, 0];
 var interval;
 var timerRunning = false;
 
-// Add leading zero to numbers 9 or below (purely for aesthetics):
+// Add leading zero to numbers 9 or below (purely for aesthetics) NMC
 function leadingZero(time) {
   if (time <= 9) {
     time = "0" + time;
@@ -19,7 +19,7 @@ function leadingZero(time) {
   return time;
 }
 
-// Run a standard minute/second/hundredths timer:
+// Run a standard minute/second/hundredths timer NMC
 function runTimer() {
   let currentTime =
     leadingZero(timer[0]) +
@@ -35,7 +35,7 @@ function runTimer() {
   timer[2] = Math.floor(timer[3] - timer[1] * 100 - timer[0] * 6000);
 }
 
-// Match the text entered with the provided text on the page:
+// Match the text entered with the provided text on the page 
 function spellCheck() {
   var originText = document.querySelector("#origin-text p").innerHTML;
   let textEntered = testArea.value;
@@ -60,7 +60,7 @@ function spellCheck() {
   }
 }
 
-// Start the timer:
+// Start the timer
 function start() {
   let textEnteredLength = testArea.value.length;
   if (textEnteredLength === 0 && !timerRunning) {
@@ -78,21 +78,21 @@ function setDisplayTwo() {
   bestWpm.innerHTML = "Best WPM: " + setSave();
 }
 
-//Counts the words in text area:
+//Counts the words in text area
 function wordCount() {
   var finalString = testArea.value;
   var finalWordCount = finalString.split(" ").length;
   return finalWordCount;
 }
 
-// Calculate words per minute:
+// Calculate words per minute
 function wpm() {
   var finalTime = timer[0] * 60 + timer[1];
   var result = Math.floor((60 / finalTime) * wordCount());
   return result;
 }
 
-// Redo same puzzle:
+// Redo same puzzle
 function redo() {
   setDisplayOne();
   clearInterval(interval);
@@ -119,7 +119,7 @@ function reset() {
   nextRandom();
 }
 
-// Event listeners for keyboard input and the reset/redo buttons:
+// Event listeners for keyboard input and the reset/redo buttons
 testArea.addEventListener("keypress", start, false);
 testArea.addEventListener("keyup", spellCheck, false);
 redoButton.addEventListener("click", redo, false);
